@@ -57,6 +57,9 @@ body {
   grid-area: menu1a;
 }
 
+.poster{
+  background-color:$grisClaro;
+}
 // Grid layout for wide display
 @supports (display:grid) {
   @media (min-width: 42em) and (min-height: 27em) {
@@ -64,7 +67,15 @@ body {
       max-width: none;
       padding: 0;
       display: grid;
-      grid-template-columns: 2fr minmax(10em, max-content) minmax(14em, max-content) minmax(1em, 1fr) fit-content(28em) calc(2em + 0.5vw);
+//      grid-template-columns: 2fr minmax(10em, max-content) minmax(14em, max-content) minmax(1em, 1fr) fit-content(28em) calc(2em + 0.5vw);
+      grid-template-columns:
+      calc(3em + 0.5vw)
+      4fr
+      minmax(19em, max-content)
+      minmax(4em, max-content)
+      minmax(1em, 4fr)
+
+      ;
       grid-template-rows: 5vh 60vh 15vh 10vh;
     }
 
@@ -72,16 +83,19 @@ body {
       grid-column: 3 / 6;
       grid-row: 1 / 2;
       z-index: 2;
-      padding-left: 12.5em;
+      padding-left: 4.5em;
       margin-bottom: initial;
+      font-size:70px;
     }
 
     h2 {
       grid-row: 1 / -1;
-      grid-column: 6 / 7;
+      grid-column: 1 / 1;
       writing-mode: vertical-rl;
+      transform: rotate(180deg);
       margin-bottom: initial;
       color: $text;
+      text-align:center;
     }
 
     .about {
@@ -90,6 +104,7 @@ body {
       align-self: end;
       padding-bottom: 4vh;
       margin-bottom: initial;
+      padding-top: 20px;
       z-index:4;
     }
 
@@ -110,14 +125,14 @@ body {
     }
 
     img {
-      grid-column: 1 / 4;
-      grid-row: 1 / 4;
+      grid-column: 2 / 5;
+      grid-row: 2 / 5;
       z-index: 0;
 
     }
 
     .location {
-      grid-column: 3 / 4;
+      grid-column: 5 / 6;
       grid-row: 3 / 4;
       z-index: 2;
 //    background: $main;
@@ -131,7 +146,7 @@ body {
     }
 
     button {
-      grid-column: 2 / 3;
+      grid-column: 3 / 4;
       grid-row: 3 / 4;
       position: initial;
       padding: 0;
