@@ -18,7 +18,7 @@ body {
 /* items */
 
 .grid-1 div {
-  color: white;
+  color: #6600CC;
   font-size: 20px;
   padding: 20px;
   }
@@ -30,7 +30,7 @@ body {
 }
 
 .item-2 {
-  background: #33a8a5;
+
   height: 500px;
  }
 .item-3 {
@@ -65,14 +65,14 @@ body {
       padding: 0;
       display: grid;
       grid-template-columns: 2fr minmax(10em, max-content) minmax(14em, max-content) minmax(1em, 1fr) fit-content(28em) calc(2em + 0.5vw);
-      grid-template-rows: 35vh 40vh 15vh 10vh;
+      grid-template-rows: 5vh 60vh 15vh 10vh;
     }
 
     h1 {
       grid-column: 3 / 6;
       grid-row: 1 / 2;
       z-index: 2;
-      padding-left: 0.25em;
+      padding-left: 12.5em;
       margin-bottom: initial;
     }
 
@@ -84,20 +84,13 @@ body {
       color: $text;
     }
 
-    hr {
-      grid-column: 5 / 6;
-      grid-row: 2;
-      height: 6px;
-      background-color: $text;
-      width: 20ch;
-    }
-
     .about {
       grid-column: 5 / 6;
       grid-row: 2;
       align-self: end;
       padding-bottom: 4vh;
       margin-bottom: initial;
+      z-index:4;
     }
 
     a {
@@ -119,15 +112,18 @@ body {
     img {
       grid-column: 1 / 4;
       grid-row: 1 / 4;
+      z-index: 0;
+
     }
 
     .location {
       grid-column: 3 / 4;
       grid-row: 3 / 4;
       z-index: 2;
-      background: $main;
+//    background: $main;
       text-align: center;
       display: flex;
+//      color: black !important;
 
       p {
         margin: auto;
@@ -136,9 +132,10 @@ body {
 
     button {
       grid-column: 2 / 3;
-      grid-row: 4 / 5;
+      grid-row: 3 / 4;
       position: initial;
       padding: 0;
+      z-index:8;
     }
   }
 
