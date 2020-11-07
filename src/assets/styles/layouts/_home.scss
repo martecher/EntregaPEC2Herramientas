@@ -3,6 +3,9 @@ body {
   background: #f5f7f8;
 }
 
+a{
+
+}
 
 .grid-1 {
   width: 100%;
@@ -11,30 +14,35 @@ body {
 
 }
 .grid-1 div {
-  color: white;
   font-size: 20px;
   padding: 20px;
   }
 /* items */
 
-.grid-1 div {
-  color: #6600CC;
-  font-size: 20px;
-  padding: 20px;
-  }
 
+
+.logo{
+  float:left;
+  padding-right: 5%;
+  //padding: 5% 0;
+}
+.logo-texto{
+   padding: 10% 0;
+}
 /* specific item styles */
 
 .item-1 {
-  background: #b03532;
+  margin:0;
+  color:$color-fondo !important;
 }
 
 .item-2 {
-
-  height: 500px;
+  margin:0;
+  height: 450px;
+  color: white;
  }
+
 .item-3 {
-  background: #30997a;
 
 }
 .item-4 {
@@ -53,17 +61,16 @@ body {
 }
 
 .menu-superior-1{
-  background: #6a478f;
   grid-area: menu1a;
 }
 
 .poster{
-  background-color:$grisClaro;
+  background-color:$color-fondo;
 }
 // Grid layout for wide display
 @supports (display:grid) {
   @media (min-width: 42em) and (min-height: 27em) {
-    main {
+    .poster-grid {
       max-width: none;
       padding: 0;
       display: grid;
@@ -79,16 +86,17 @@ body {
       grid-template-rows: 5vh 60vh 15vh 10vh;
     }
 
-    h1 {
+    .poster-titulo {
       grid-column: 3 / 6;
       grid-row: 1 / 2;
       z-index: 2;
       padding-left: 4.5em;
       margin-bottom: initial;
       font-size:70px;
+      color:#00b48a;
     }
 
-    h2 {
+    .poster-subtitulo {
       grid-row: 1 / -1;
       grid-column: 1 / 1;
       writing-mode: vertical-rl;
@@ -98,7 +106,7 @@ body {
       text-align:center;
     }
 
-    .about {
+    .texto {
       grid-column: 5 / 6;
       grid-row: 2;
       align-self: end;
@@ -108,21 +116,7 @@ body {
       z-index:4;
     }
 
-    a {
-      grid-column: 5 / 6;
-      justify-self: end;
-      align-self: center;
-      margin-bottom: initial;
 
-      &::before {
-        content: '';
-        display: block;
-        height: 4px;
-        background-color: $accent;
-        width: 4ch;
-        margin-bottom: 1em;
-      }
-    }
 
     img {
       grid-column: 2 / 5;
@@ -155,12 +149,36 @@ body {
   }
 
   @media (min-width: 48em) and (min-height: 27em) {
-    hr {
-      opacity: 1;
+    .poster-titulo {
+      color:#00b48a;
     }
   }
 }
 
+.footer {
+  text-align: center;
+  display: grid;
+  width: 100%;
+  max-width: $ancho-maximo;
+  margin: auto;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 100px);
+  grid-gap: 5px;
+  grid-template-areas:  "footera footerb footerc footerd";
+  color: #111d2d!important;
+}
+.footera{
+  grid-area: footera;
+}
+.footerb{
+  grid-area: footerb;
+}
+.footerc{
+  grid-area: footerc;
+}
+.footerd{
+  grid-area: footerd;
+}
 /* warn against lack of browser support */
 
 .nope {
