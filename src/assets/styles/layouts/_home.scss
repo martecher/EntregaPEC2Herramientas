@@ -47,7 +47,8 @@ a{
 
 }
 .item-4 {
-background-color: #111d2d;
+border-top: 5px;
+border-color: #cccccc;
  }
 
 .menu-superior {
@@ -179,6 +180,35 @@ background-color: #111d2d;
 }
 .footerd{
   grid-area: footerd;
+}
+.menu-inferior {
+  display: grid;
+  width: 100%;
+  max-width: $ancho-maximo;
+  margin: auto;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 2fr ;
+  grid-template-rows: repeat(1, 100px);
+  grid-gap: 5px;
+  grid-template-areas:  "menu1a menu1b menu1c menu1d menu1e menu1f"
+}
+.menuInfa{
+  grid-area: menu1a;
+}
+.menuInfb{
+  grid-area: menu1b;
+}
+.menuInfc{
+  grid-area: menu1c;
+}
+.menuInfd{
+  grid-area: menu1d;
+}
+.menuInfre{
+  grid-area: menu1e;
+}
+.menuInff{
+  grid-area: menu1f;
+  text-align: left;
 }
 /* warn against lack of browser support */
 
