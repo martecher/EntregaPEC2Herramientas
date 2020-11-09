@@ -4,8 +4,8 @@ body {
 }
 
 a{
-  text-decoration: none;
   color: #111d2d;
+  text-decoration: none;
 }
 
 .grid-1 {
@@ -15,41 +15,36 @@ a{
 
 }
 .grid-1 div {
-  font-size: 20px;
   padding: 20px;
-  }
+  font-size: 20px;
+}
+
 /* items */
-
-
-
 .logo{
-  float:left;
+  float: left;
   padding-right: 5%;
-  //padding: 5% 0;
 }
-.logo-texto{
-   padding: 10% 0;
-}
-/* specific item styles */
 
+.logo-texto{
+  padding: 10% 0;
+}
+
+/* specific item styles */
 .item-1 {
-  margin:0;
-  color:$color-fondo !important;
+  margin: 0;
+  color: $color-fondo !important;
 }
 
 .item-2 {
-  margin:0;
   height: 600px;
-  color: white;
- }
-
-.item-3 {
-
+  margin: 0;
+  color: #fff;
 }
+
 .item-4 {
-border-top: 5px;
-border-color: #cccccc;
- }
+  border-color: #ccc;
+  border-top: 5px;
+}
 
 .menu-superior {
   display: grid;
@@ -59,7 +54,7 @@ border-color: #cccccc;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(1, 100px);
   grid-gap: 5px;
-  grid-template-areas:  "menu1a menu1a menu1a menu1a menu1a menu1b menu1c menu1d"
+  grid-template-areas: "menu1a menu1a menu1a menu1a menu1a menu1b menu1c menu1d";
 }
 
 .menu-superior-1{
@@ -67,22 +62,23 @@ border-color: #cccccc;
 }
 
 .poster{
-  background-color:$color-fondo;
+  background-color: $color-fondo;
 }
 // Grid layout for wide display
 @supports (display:grid) {
-@media only screen and  (min-width:  1000px){
+  @media only screen and  (min-width: 1000px){
     .poster-grid {
+      display: grid;
       max-width: none;
       padding: 0;
-      display: grid;
-    grid-gap: 1rem;
-     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 100px 200px 50px 150px;
-    grid-template-areas:  "sb tt tt tt txt"
-                          "sb img img img txt"
-                          "sb img img img txt"
-                          "sb btn bb fch txt";
+      grid-gap: 1rem;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 100px 200px 50px 150px;
+      grid-template-areas:
+        "sb tt tt tt txt"
+        "sb img img img txt"
+        "sb img img img txt"
+        "sb btn bb fch txt";
     }
 
     .poster-titulo {
@@ -90,25 +86,25 @@ border-color: #cccccc;
       z-index: 2;
       padding-left: 4.5em;
       margin-bottom: initial;
-      font-size:70px;
-      color:#bbe4c4;
+      font-size: 70px;
+      color: #bbe4c4;
     }
 
     .poster-subtitulo {
       grid-area: sb;
       writing-mode: vertical-rl;
-      transform: rotate(180deg);
       margin-bottom: initial;
       color: $text;
-      text-align:center;
+      text-align: center;
+      transform: rotate(180deg);
     }
 
     .texto {
       grid-area: txt;
+      z-index: 4;
+      padding-top: 20px;
       padding-bottom: 4vh;
       margin-bottom: initial;
-      padding-top: 20px;
-      z-index:4;
     }
 
     img {
@@ -118,11 +114,11 @@ border-color: #cccccc;
     }
 
     .location {
+      z-index: 2;
+      display: flex;
       color: #bbe4c4;
       grid-area: fch;
-      z-index: 2;
       text-align: center;
-      display: flex;
       p {
         margin: auto;
       }
@@ -131,55 +127,54 @@ border-color: #cccccc;
     button {
       grid-area: btn;
       position: initial;
+      z-index: 8;
       padding: 0;
-      z-index:8;
     }
 
-.footer {
-  text-align: center;
-  display: grid;
-  width: 100%;
-  max-width: $ancho-maximo;
-  margin: auto;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(1, 100px);
-  grid-gap: 5px;
-  grid-template-areas:  "footera footerb footerc footerd";
-  color: #111d2d!important;
-}
-.footera{
-  grid-area: footera;
-}
-.footerb{
-  grid-area: footerb;
-}
-.footerc{
-  grid-area: footerc;
-}
-.footerd{
-  grid-area: footerd;
-}
+    .footer {
+      display: grid;
+      width: 100%;
+      max-width: $ancho-maximo;
+      margin: auto;
+      color: #111d2d !important;
+      text-align: center;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(1, 100px);
+      grid-gap: 5px;
+      grid-template-areas: "footera footerb footerc footerd";
+    }
+    .footera{
+      grid-area: footera;
+    }
+    .footerb{
+      grid-area: footerb;
+    }
+    .footerc{
+      grid-area: footerc;
+    }
+    .footerd{
+      grid-area: footerd;
+    }
   }
 
-  @media only screen and  (min-width:  368px) and (max-width: 999px){
-.item-2 {
-
-     height: 700px;
-}
-    .poster-titulo {
-      color:#bbe4c4;
+  @media only screen and  (min-width: 368px) and (max-width: 999px){
+    .item-2 {
+      height: 700px;
     }
-        .location {
+    .poster-titulo {
+      color: #bbe4c4;
+    }
+    .location {
+      z-index: 2;
+      display: flex;
       color: #bbe4c4;
       grid-area: fch;
-      z-index: 2;
       text-align: center;
-      display: flex;
       p {
         margin: auto;
       }
     }
-        img {
+    img {
       grid-area: img;
       z-index: 0;
       max-width: 60%;
@@ -192,42 +187,42 @@ border-color: #cccccc;
   width: 100%;
   max-width: $ancho-maximo;
   margin: auto;
-  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 2fr ;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 2fr;
   grid-template-rows: repeat(1, 100px);
   grid-gap: 5px;
-  grid-template-areas:  "menu1a menu1b menu1c menu1d menu1e menu1f"
+  grid-template-areas: "menu1a menu1b menu1c menu1d menu1e menu1f";
 }
-.menuInfa{
+
+.menu-inferior-1{
   grid-area: menu1a;
 }
-.menuInfb{
+.menu-inferior-2{
   grid-area: menu1b;
 }
-.menuInfc{
+.menu-inferior-3{
   grid-area: menu1c;
 }
-.menuInfd{
+.menu-inferior-4{
   grid-area: menu1d;
 }
-.menuInfre{
+.menu-inferior-5{
   grid-area: menu1e;
 }
-.menuInff{
+.menu-inferior-6{
   grid-area: menu1f;
   text-align: left;
 }
-/* warn against lack of browser support */
 
 .nope {
-  display: block;
-  color: white;
-  background: orange;
-  text-align: center;
-  padding: 10px;
   position: absolute;
   top: 0;
-  left: 0;
   right: 0;
+  left: 0;
+  display: block;
+  padding: 10px;
+  color: #f5f7f8;
+  text-align: center;
+  background: #000;
 }
 
 @supports (display: grid) {

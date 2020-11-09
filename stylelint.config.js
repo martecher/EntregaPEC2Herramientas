@@ -3,10 +3,12 @@ module.exports = {
     'stylelint-config-standard'
   ],
   'plugins': [
-      "stylelint-scss",
+    "stylelint-scss",
     'stylelint-order'
   ],
   'rules': {
+    "selector-class-pattern": false,
+    "at-rule-no-unknown": null,
     'at-rule-empty-line-before': null,
     'at-rule-name-space-after': 'always',
     'at-rule-no-vendor-prefix': true,
@@ -17,7 +19,7 @@ module.exports = {
     'color-named': 'never',
     'declaration-block-semicolon-newline-before': 'never-multi-line',
     'declaration-empty-line-before': null,
-    'declaration-no-important': true,
+    'declaration-no-important': null,
     'font-family-name-quotes': 'always-where-recommended',
     'font-weight-notation': [
       'numeric',
