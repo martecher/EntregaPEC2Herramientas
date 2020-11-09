@@ -1,3 +1,5 @@
+@import "bandas";
+
 body {
   padding-top: 20px;
   background: #f5f7f8;
@@ -41,6 +43,11 @@ a{
   color: #fff;
 }
 
+.item-2-bandas {
+  height: auto;
+  margin: 0;
+  color: #fff;
+}
 .item-4 {
   border-color: #ccc;
   border-top: 5px;
