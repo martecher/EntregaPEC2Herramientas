@@ -2,7 +2,15 @@
   padding: 0 1em;
   margin: 0 auto;
 }
-
+.item-2-bandas {
+  height: auto;
+  margin: 0;
+  color: #fff;
+}
+.imagen-card{
+      z-index: 0;
+      max-width: 100%;
+}
 @media screen and (min-width: 52em) {
   .centered {
     max-width: 52em;

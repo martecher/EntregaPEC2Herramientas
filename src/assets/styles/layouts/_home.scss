@@ -45,11 +45,7 @@ a{
   color: #fff;
 }
 
-.item-2-bandas {
-  height: auto;
-  margin: 0;
-  color: #fff;
-}
+
 .item-4 {
   border-color: #ccc;
   border-top: 5px;
@@ -116,7 +112,7 @@ a{
       margin-bottom: initial;
     }
 
-    img {
+    .imagen-poster {
       grid-area: img;
       z-index: 0;
       max-width: 90%;
@@ -183,7 +179,7 @@ a{
         margin: auto;
       }
     }
-    img {
+    .imagen-poster {
       grid-area: img;
       z-index: 0;
       max-width: 60%;
