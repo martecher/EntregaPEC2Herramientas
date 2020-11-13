@@ -254,8 +254,9 @@ a{
       grid-template-columns: 2fr 1fr 1fr 1fr 1fr 2fr;
       grid-template-rows: repeat(2, 100px);
       grid-gap: 5px;
-      grid-template-areas: "menu1a menu1a menu1a menu1a menu1a menu1a"
-                           "menu1b menu1c menu1d menu1e menu1f menu1f";
+      grid-template-areas:
+        "menu1a menu1a menu1a menu1a menu1a menu1a"
+        "menu1b menu1c menu1d menu1e menu1f menu1f";
     }
 
     .menu-inferior-1{
@@ -277,7 +278,7 @@ a{
       grid-area: menu1f;
       text-align: left;
     }
-}
+  }
 
   @media only screen and  (min-width: 100px) and (max-width: 499px){
 
@@ -311,8 +312,9 @@ a{
       grid-template-columns: repeat(8, 1fr);
       grid-template-rows: repeat(2, 100px);
       grid-gap: 5px;
-      grid-template-areas:  "menu1a menu1a menu1a menu1a menu1a menu1a menu1a menu1a"
-                            "menu1b menu1c menu1d menu1f menu1f menu1f menu1f menu1f";
+      grid-template-areas:
+        "menu1a menu1a menu1a menu1a menu1a menu1a menu1a menu1a"
+        "menu1b menu1c menu1d menu1f menu1f menu1f menu1f menu1f";
     }
 
     .menu-superior-1{
@@ -324,13 +326,15 @@ a{
       width: 100%;
       max-width: $ancho-maximo;
       margin: auto;
-      grid-template-columns:  1fr 1fr 1fr 1fr ;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-template-rows: repeat(2, 100px);
       grid-gap: 5px;
-      grid-template-areas: "menuInfa menuInfa menuInfa menuInfa"
-                           "menuInfb menuInfb menuInfc menuInfc"
-                           "menuInfd menuInfd menuInfe menuInfe"
-                           "menuInff menuInff menuInff menuInff";                           ;
+      grid-template-areas:
+        "menuInfa menuInfa menuInfa menuInfa"
+        "menuInfb menuInfb menuInfc menuInfc"
+        "menuInfd menuInfd menuInfe menuInfe"
+        "menuInff menuInff menuInff menuInff";
+
     }
 
     .menu-inferior-1{
@@ -353,17 +357,17 @@ a{
       text-align: left;
     }
   }
-.nope {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  display: block;
-  padding: 10px;
-  color: #f5f7f8;
-  text-align: center;
-  background: #000;
-}
+  .nope {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: block;
+    padding: 10px;
+    color: #f5f7f8;
+    text-align: center;
+    background: #000;
+  }
 }
 @supports (display: grid) {
   .nope {

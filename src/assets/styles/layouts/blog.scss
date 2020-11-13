@@ -1,19 +1,19 @@
 .carrusel{
-    display: flex;
-  justify-content: center;
+  display: flex;
   align-items: center;
+  justify-content: center;
   margin: auto;
 }
-  .div-centrado{
-    width: 80%;
-    display: flex;
-  justify-content: center;
+.div-centrado{
+  display: flex;
   align-items: center;
+  justify-content: center;
+  width: 100%;
   margin: auto;
 }
 .texto-justificado{
-text-align: justify;
-texto-justify: inter-palabra;
+  text-align: justify;
+  text-justify: inter-palabra;
 }
 
 .borde70{
@@ -21,5 +21,5 @@ texto-justify: inter-palabra;
 }
 
 .imagen-flotante{
- float: left;
+  float: left;
 }
