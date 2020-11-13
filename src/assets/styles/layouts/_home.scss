@@ -160,9 +160,55 @@ a{
     .footerd{
       grid-area: footerd;
     }
+
+    .menu-superior {
+      display: grid;
+      width: 100%;
+      max-width: $ancho-maximo;
+      margin: auto;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(1, 100px);
+      grid-gap: 5px;
+      grid-template-areas: "menu1a menu1a menu1a menu1a menu1a menu1b menu1c menu1d";
+    }
+
+    .menu-superior-1{
+      grid-area: menu1a;
+    }
+    .menu-inferior {
+      display: grid;
+      width: 100%;
+      max-width: $ancho-maximo;
+      margin: auto;
+      grid-template-columns: 2fr 1fr 1fr 1fr 1fr 2fr;
+      grid-template-rows: repeat(1, 100px);
+      grid-gap: 5px;
+      grid-template-areas: "menu1a menu1b menu1c menu1d menu1e menu1f";
+    }
+
+    .menu-inferior-1{
+      grid-area: menu1a;
+    }
+    .menu-inferior-2{
+      grid-area: menu1b;
+    }
+    .menu-inferior-3{
+      grid-area: menu1c;
+    }
+    .menu-inferior-4{
+      grid-area: menu1d;
+    }
+    .menu-inferior-5{
+      grid-area: menu1e;
+    }
+    .menu-inferior-6{
+      grid-area: menu1f;
+      text-align: left;
+    }
   }
 
-  @media only screen and  (min-width: 368px) and (max-width: 999px){
+  @media only screen and  (min-width: 500px) and (max-width: 999px){
+
     .item-2 {
       height: 700px;
     }
@@ -184,40 +230,129 @@ a{
       z-index: 0;
       max-width: 60%;
     }
+
+    .menu-superior {
+      display: grid;
+      width: 100%;
+      max-width: $ancho-maximo;
+      margin: auto;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(1, 100px);
+      grid-gap: 5px;
+      grid-template-areas: "menu1a menu1a menu1a menu1a menu1a menu1b menu1c menu1d";
+    }
+
+    .menu-superior-1{
+      grid-area: menu1a;
+    }
+
+    .menu-inferior {
+      display: grid;
+      width: 100%;
+      max-width: $ancho-maximo;
+      margin: auto;
+      grid-template-columns: 2fr 1fr 1fr 1fr 1fr 2fr;
+      grid-template-rows: repeat(2, 100px);
+      grid-gap: 5px;
+      grid-template-areas: "menu1a menu1a menu1a menu1a menu1a menu1a"
+                           "menu1b menu1c menu1d menu1e menu1f menu1f";
+    }
+
+    .menu-inferior-1{
+      grid-area: menu1a;
+    }
+    .menu-inferior-2{
+      grid-area: menu1b;
+    }
+    .menu-inferior-3{
+      grid-area: menu1c;
+    }
+    .menu-inferior-4{
+      grid-area: menu1d;
+    }
+    .menu-inferior-5{
+      grid-area: menu1e;
+    }
+    .menu-inferior-6{
+      grid-area: menu1f;
+      text-align: left;
+    }
+}
+
+  @media only screen and  (min-width: 100px) and (max-width: 499px){
+
+    .item-2 {
+      height: auto;
+    }
+    .poster-titulo {
+      color: #bbe4c4;
+    }
+    .location {
+      z-index: 2;
+      display: flex;
+      color: #bbe4c4;
+      grid-area: fch;
+      text-align: center;
+      p {
+        margin: auto;
+      }
+    }
+    .imagen-poster {
+      grid-area: img;
+      z-index: 0;
+      max-width: 60%;
+    }
+
+    .menu-superior {
+      display: grid;
+      width: 100%;
+      max-width: $ancho-maximo;
+      margin: auto;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(2, 100px);
+      grid-gap: 5px;
+      grid-template-areas:  "menu1a menu1a menu1a menu1a menu1a menu1a menu1a menu1a"
+                            "menu1b menu1c menu1d menu1f menu1f menu1f menu1f menu1f";
+    }
+
+    .menu-superior-1{
+      grid-area: menu1a;
+    }
+
+    .menu-inferior {
+      display: grid;
+      width: 100%;
+      max-width: $ancho-maximo;
+      margin: auto;
+      grid-template-columns:  1fr 1fr 1fr 1fr ;
+      grid-template-rows: repeat(2, 100px);
+      grid-gap: 5px;
+      grid-template-areas: "menuInfa menuInfa menuInfa menuInfa"
+                           "menuInfb menuInfb menuInfc menuInfc"
+                           "menuInfd menuInfd menuInfe menuInfe"
+                           "menuInff menuInff menuInff menuInff";                           ;
+    }
+
+    .menu-inferior-1{
+      grid-area: menuInfa;
+    }
+    .menu-inferior-2{
+      grid-area: menuInfb;
+    }
+    .menu-inferior-3{
+      grid-area: menuInfc;
+    }
+    .menu-inferior-4{
+      grid-area: menuInfd;
+    }
+    .menu-inferior-5{
+      grid-area: menuInfe;
+    }
+    .menu-inferior-6{
+      grid-area: menuInff;
+      text-align: left;
+    }
   }
-}
-
-.menu-inferior {
-  display: grid;
-  width: 100%;
-  max-width: $ancho-maximo;
-  margin: auto;
-  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 2fr;
-  grid-template-rows: repeat(1, 100px);
-  grid-gap: 5px;
-  grid-template-areas: "menu1a menu1b menu1c menu1d menu1e menu1f";
-}
-
-.menu-inferior-1{
-  grid-area: menu1a;
-}
-.menu-inferior-2{
-  grid-area: menu1b;
-}
-.menu-inferior-3{
-  grid-area: menu1c;
-}
-.menu-inferior-4{
-  grid-area: menu1d;
-}
-.menu-inferior-5{
-  grid-area: menu1e;
-}
-.menu-inferior-6{
-  grid-area: menu1f;
-  text-align: left;
-}
-
 .nope {
   position: absolute;
   top: 0;
@@ -229,7 +364,7 @@ a{
   text-align: center;
   background: #000;
 }
-
+}
 @supports (display: grid) {
   .nope {
     display: none;
