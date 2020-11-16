@@ -20,11 +20,6 @@
   }
 }
 
-.card {
-  margin-bottom: 2em;
-  background: #fff;
-}
-
 .enlace {
   color: #000;
   text-decoration: none;
@@ -48,16 +43,20 @@
 .card-texto {
   font-size: 95%;
 }
-  .cards {
-    color: #000;
-  }
-  .card {
-    display: flex;
-    flex-direction: column;
+
+.cards {
+  margin-bottom: 2em;
+  color: #000;
+  background: #fff;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
 }
 
 .card .content {
-    flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 @media screen and (min-width: 40em) {
