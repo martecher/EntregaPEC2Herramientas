@@ -7,6 +7,9 @@
   margin: 0;
   color: #fff;
 }
+.footer-centrado{
+  text-align: center;
+}
 .imagen-card{
   z-index: 0;
   max-width: 100%;
@@ -45,7 +48,17 @@
 .card-texto {
   font-size: 95%;
 }
+  .cards {
+    color: #000;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+}
 
+.card .content {
+    flex: 1 1 auto;
+}
 
 @media screen and (min-width: 40em) {
   .cards {
